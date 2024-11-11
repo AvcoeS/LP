@@ -1,0 +1,80 @@
+#define BLYNK_PRINT Serial
+
+
+
+
+
+
+
+#include <ESP8266WiFi.h>
+
+
+
+
+
+#define BLYNK_TEMPLATE_ID "TMPL3HzBPiPLn"
+
+
+
+#define BLYNK_TEMPLATE_NAME "led"
+
+
+
+#include <BlynkSimpleEsp8266.h>
+
+
+
+#define BLYNK_AUTH_TOKEN "ye_7hw9wOkPuA34qy7EVnopM7F04KCv6"
+
+
+
+char auth[] BLYNK_AUTH_TOKEN;
+
+
+
+char ssid[] "Chaitanya";
+
+
+char pass[] = "chaitu1904";
+
+
+BLYNK WRITE (Ve) {
+
+
+digitalWrite(De, param.asInt());
+
+
+}
+
+
+
+
+
+void setup()
+
+{
+
+
+
+pinMode(DO, OUTPUT);
+
+
+
+Blynk.begin(BLYNK_AUTH_TOKEN, ssid, pass, Iblynk_cloud", 80);
+
+
+
+
+
+void loop()
+
+
+
+{
+
+
+
+Blynk.run();
+
+
+}
